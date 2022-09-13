@@ -1,0 +1,41 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "stack",
+            "Effect": "Allow",
+            "Action": [
+                "cloudformation:*"
+            ],
+            "Resource": "arn:aws:cloudformation:*:###CLUSTERACCOUNT###:stack/CDKToolkit/*"
+        },
+        {
+            "Sid": "s3",
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": "arn:aws:s3:::*"
+        },
+        {
+            "Sid": "iam",
+            "Effect": "Allow",
+            "Action": "iam:*",
+            "Resource": "arn:aws:iam::###CLUSTERACCOUNT###:*"
+        },
+        {
+            "Sid": "ssm",
+            "Effect": "Allow",
+            "Action": "ssm:*",
+            "Resource": "arn:aws:ssm:*:###CLUSTERACCOUNT###:*"
+        },
+        {
+            "Sid": "ecr",
+            "Effect": "Allow",
+            "Action": [
+              "ecr:*"
+            ],
+            "Resource": [
+              "arn:aws:ecr:*:###CLUSTERACCOUNT###:repository/*"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "paths": {
+    "/regions": {
+      "name": "/regions",
+      "lambdaFunction": "saasRegionList",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "read"
+        ]
+      }
+    },
+    "/regions/add": {
+      "name": "/regions/add",
+      "lambdaFunction": "saasRegionAdd",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update"
+        ]
+      }
+    },
+    "/accounts": {
+      "name": "/accounts",
+      "lambdaFunction": "saasAccountList",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update"
+        ]
+      }
+    },
+    "/accounts/add": {
+      "name": "/accounts/add",
+      "lambdaFunction": "saasAccountAdd",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update"
+        ]
+      }
+    },
+    "/regions/remove": {
+      "name": "/regions/remove",
+      "lambdaFunction": "saasRegionRemove",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    },
+    "/users": {
+      "name": "/users",
+      "lambdaFunction": "saasUserList",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update"
+        ]
+      }
+    },
+    "/accounts/remove": {
+      "name": "/accounts/remove",
+      "lambdaFunction": "saasAccountRemove",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    }
+  }
+}
