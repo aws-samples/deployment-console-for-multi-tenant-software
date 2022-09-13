@@ -4,6 +4,7 @@
 node_modules
 real_event.json
 !index.js
+package-lock.json
 
 # CDK asset staging directory
 .cdk.staging
