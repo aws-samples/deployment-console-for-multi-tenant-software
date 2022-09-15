@@ -10,7 +10,7 @@ fi
 
 # check CDK
 CHECK="$(cdk --version)"
-SUB='2.3'
+SUB='2.'
 if [[ "$CHECK" == *"$SUB"* ]]; then
   echo "✓ AWS CDK v2 installed"
 else
@@ -71,6 +71,7 @@ CURRENT_PATH="$(pwd $0)"
 
   # deploy amplify and frontend
   echo -e "Start deploying frontend ..."
+  cd ..
   cd ./frontend
   npm install
   amplify init
