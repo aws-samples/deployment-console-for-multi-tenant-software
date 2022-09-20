@@ -65,7 +65,7 @@ export class ManagementCdkStack extends Stack {
           "logs:CreateLogStream",
           "logs:PutLogEvents"
         ],
-        resources: ['arn:aws:logs:::*'],
+        resources: ['arn:aws:logs:*:*:*'],
       });
       const crossAccountBootstrapRights = new iam.PolicyStatement({
         effect: iam.Effect.ALLOW,
@@ -95,8 +95,8 @@ export class ManagementCdkStack extends Stack {
       // create a policy statement
       const writeDynamoDB = new iam.PolicyStatement({
         effect: iam.Effect.ALLOW,
-        actions: ['dynamodb:*'],
-        resources: ['arn:aws:dynamodb:::*'],
+        actions: ['dynamodb:UpdateItem', 'dynamodb:DeleteItem'],
+        resources: ['arn:aws:dynamodb:*:*:table/regions', 'arn:aws:dynamodb:*:*:table/accounts'],
       });
       const cloudWatchBasic = new iam.PolicyStatement({
         effect: iam.Effect.ALLOW,
@@ -105,7 +105,7 @@ export class ManagementCdkStack extends Stack {
           "logs:CreateLogStream",
           "logs:PutLogEvents"
         ],
-        resources: ['arn:aws:logs:::*'],
+        resources: ['arn:aws:logs:*:*:*'],
       });
 
       // add the policy to the Function's role

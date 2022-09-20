@@ -24,7 +24,7 @@ const apiName = 'api49106c82';
 const AccountAdd: FunctionComponent = () => {
     const history = useHistory();
     const [possiblePrimaryRegions, setPossiblePrimaryRegions] = useState([]); 
-    const [possibleBackupRegions, setPossibleBackupRegions] = useState([]); 
+  //  const [possibleBackupRegions, setPossibleBackupRegions] = useState([]); 
 
     const initialValues = {
         code: 'haribo',
@@ -124,10 +124,10 @@ const AccountAdd: FunctionComponent = () => {
             });
             setPossiblePrimaryRegions(tempRoleOptions);
 
-            tempRoleOptions.push({
-                label: 'No Backup', value: 'none'
-            });
-            setPossibleBackupRegions(tempRoleOptions);
+         //   tempRoleOptions.push({
+         //       label: 'No Backup', value: 'none'
+         //   });
+         //   setPossibleBackupRegions(tempRoleOptions);
             return true;
           } catch (err) {
             console.log({ err });
