@@ -74,7 +74,7 @@ export interface OdooCustomerStackProps extends StackProps {
         });
         const container = taskDefinition.addContainer(props.customer_code + 'web', {
           //image: ecs.ContainerImage.fromRegistry("amazon/amazon-ecs-sample"),
-          image: ecs.ContainerImage.fromRegistry("odoo"),
+          image: ecs.ContainerImage.fromRegistry("odoo:15"),
           memoryLimitMiB: 1024,
           cpu: 512,
           environment: {
